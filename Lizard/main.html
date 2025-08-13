@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>Lizard</title>  
+    <style>
+        .circle-btn {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: none;
+            background: #3498db;
+            color: #fff;
+            font-size: 48px;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            transition: background 0.2s, transform 0.1s;
+        }
+        .circle-btn:active {
+            background: #217dbb;
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <button class="circle-btn" id="soundBtn">🦎</button>
+    <audio id="btnSound" src="lizard_meme.mp3"></audio>
+    <script>
+        const btn = document.getElementById('soundBtn');
+        const sound = document.getElementById('btnSound');
+        btn.addEventListener('click', () => {
+            sound.currentTime = 0;
+            sound.play();
+        });
+    </script>
+</body>
+</html>
